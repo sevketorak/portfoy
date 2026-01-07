@@ -1,0 +1,72 @@
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a3a3a3;
+}
+
+/* Subtle fade-in animation for page load */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Card hover effects */
+.project-card {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+
+.project-card:hover .view-link {
+    color: #171717; /* dark text on hover */
+    padding-left: 4px;
+}
+
+/* Link styles */
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card a:hover {
+    text-decoration: none;
+}
+
+.view-link {
+    text-decoration: none;
+}
+
+.view-link:hover {
+    text-decoration: none;
+}
+

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portfolio Selection Page</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#262626",
+                        "background-light": "#f9fafb",
+                        "background-dark": "#191919",
+                        "neutral-text": "#525252",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-background-light dark:bg-background-dark text-primary dark:text-white font-display antialiased min-h-screen flex flex-col">
+    
+    <!-- Main Container -->
+    <main class="w-full flex-grow flex flex-col items-center animate-fade-in">
+        
+        <!-- Hero Section -->
+        <section class="w-full max-w-[1200px] px-6 py-20 md:py-32 flex flex-col items-center text-center gap-6">
+            <h1 class="text-primary dark:text-white text-4xl md:text-5xl font-medium tracking-tight leading-tight">
+                Website Design Samples
+            </h1>
+            <p class="text-neutral-text dark:text-gray-400 text-lg md:text-xl font-normal max-w-2xl leading-relaxed">
+                Choose the style that fits your brand.
+            </p>
+        </section>
+        
+        <!-- Selection Guidance -->
+        <div class="w-full max-w-[1200px] px-6 pb-8">
+            <p class="text-neutral-text/80 dark:text-gray-500 text-sm font-normal text-center md:text-left border-l-2 border-primary/10 pl-4">
+                Each project represents a different design approach. Clients usually choose one and request a similar structure.
+            </p>
+        </div>
+        
+        <!-- Portfolio Grid -->
+        <section class="w-full max-w-[1200px] px-6 pb-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-24">
+                
+                <!-- İnşaat Card 1 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://constructcorp.netlify.app" 
+                             alt="İnşaat Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.style.background='linear-gradient(135deg, #667eea 0%, #764ba2 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            İnşaat 01
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">İnşaat</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- İnşaat Card 2 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://insaat2.netlify.app" 
+                             alt="İnşaat Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.style.background='linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            İnşaat 02
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">İnşaat</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- İnşaat Card 3 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://engineeringcorp.netlify.app" 
+                             alt="İnşaat Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.style.background='linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            İnşaat 03
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">İnşaat</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- İnşaat Card 4 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://apexdevelopments.netlify.app" 
+                             alt="İnşaat Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.style.background='linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            İnşaat 04
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">İnşaat</h3>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 1 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://calm-khapse-81a92e.netlify.app" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://calm-khapse-81a92e.netlify.app" 
+                             alt="Minimalist Brand Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://calm-khapse-81a92e.netlify.app'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 01
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Minimalist Brand</h3>
+                            <a href="https://calm-khapse-81a92e.netlify.app" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 2 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://guileless-rabanadas-9e6e99.netlify.app" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://guileless-rabanadas-9e6e99.netlify.app" 
+                             alt="Corporate Tech Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://guileless-rabanadas-9e6e99.netlify.app'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 02
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Corporate Tech</h3>
+                            <a href="https://guileless-rabanadas-9e6e99.netlify.app" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 3 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://keen-figolla-daf34a.netlify.app" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://keen-figolla-daf34a.netlify.app" 
+                             alt="Artistic Studio Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://keen-figolla-daf34a.netlify.app'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 03
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Artistic Studio</h3>
+                            <a href="https://keen-figolla-daf34a.netlify.app" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 4 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://courageous-froyo-926bc8.netlify.app" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://courageous-froyo-926bc8.netlify.app" 
+                             alt="E-commerce Clean Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://courageous-froyo-926bc8.netlify.app'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 04
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">E-commerce Clean</h3>
+                            <a href="https://courageous-froyo-926bc8.netlify.app" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 5 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://merry-tiramisu-0157be.netlify.app" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://merry-tiramisu-0157be.netlify.app" 
+                             alt="Modern Design Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://merry-tiramisu-0157be.netlify.app'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 05
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Modern Design</h3>
+                            <a href="https://merry-tiramisu-0157be.netlify.app" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 6 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://effulgent-sunflower-80102b.netlify.app" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://effulgent-sunflower-80102b.netlify.app" 
+                             alt="Creative Portfolio Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://effulgent-sunflower-80102b.netlify.app'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 06
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Creative Portfolio</h3>
+                            <a href="https://effulgent-sunflower-80102b.netlify.app" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 8 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://www.banudereyurt.com/index.html" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://www.banudereyurt.com/index.html" 
+                             alt="Banu Dere Yurt Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://www.banudereyurt.com/index.html'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 08
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Banu Dere Yurt</h3>
+                            <a href="https://www.banudereyurt.com/index.html" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 9 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://dtarim.com/tr/bahce-sistemleri/anasayfa" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://dtarim.com/tr/bahce-sistemleri/anasayfa" 
+                             alt="Demirbaş Tarım Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://dtarim.com/tr/bahce-sistemleri/anasayfa'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 09
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">Demirbaş Tarım</h3>
+                            <a href="https://dtarim.com/tr/bahce-sistemleri/anasayfa" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project Card 10 -->
+                <article class="group project-card flex flex-col gap-5 cursor-pointer">
+                    <a href="https://thinkroomwork.com/" target="_blank" rel="noopener noreferrer" class="relative w-full aspect-[4/3] bg-gray-100 dark:bg-gray-800 rounded-md overflow-hidden block">
+                        <img src="https://image.thum.io/get/width/800/crop/1200/https://thinkroomwork.com/" 
+                             alt="ThinkRoom Website Screenshot" 
+                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                             loading="lazy"
+                             onerror="this.src='https://thinkroomwork.com/'; this.style.objectFit='cover';">
+                        <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                    <div class="flex flex-col gap-1 px-1">
+                        <span class="text-xs font-medium tracking-widest uppercase text-neutral-text/60 dark:text-gray-500 mb-1">
+                            Design Sample 10
+                        </span>
+                        <div class="flex justify-between items-end">
+                            <h3 class="text-xl font-medium text-primary dark:text-white">ThinkRoom</h3>
+                            <a href="https://thinkroomwork.com/" target="_blank" rel="noopener noreferrer" class="view-link text-sm font-medium text-neutral-text dark:text-gray-400 transition-all duration-300 flex items-center gap-1">
+                                View Website <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+        
+        <!-- Feature / CTA Section -->
+        <section class="w-full max-w-[1200px] px-6 py-20 border-t border-gray-200 dark:border-gray-800">
+            <div class="flex flex-col items-center text-center gap-8 max-w-2xl mx-auto">
+                <div class="flex flex-col gap-3">
+                    <h2 class="text-2xl md:text-3xl font-medium text-primary dark:text-white tracking-tight">
+                        Like a specific style?
+                    </h2>
+                    <p class="text-neutral-text dark:text-gray-400 text-base font-normal">
+                        Share the website you like and we'll adapt it to your needs.
+                    </p>
+                </div>
+                <button class="bg-primary hover:bg-black dark:bg-white dark:text-primary dark:hover:bg-gray-200 text-white text-sm md:text-base font-medium py-3 px-8 rounded-md transition-colors duration-200 flex items-center gap-2">
+                    <span>Send Your Selection</span>
+                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                </button>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="w-full py-10 flex justify-center items-center border-t border-transparent">
+        <p class="text-neutral-text/50 dark:text-gray-600 text-sm font-normal">
+            Portfolio selection page
+        </p>
+    </footer>
+    
+</body>
+</html>
+

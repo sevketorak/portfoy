@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Projects Showcase - Apex Developments</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Top Navigation -->
+    <div class="w-full bg-white dark:bg-[#1a2632] border-b border-[#e7edf3] dark:border-[#2a3845] sticky top-0 z-50">
+        <div class="px-8 lg:px-40 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="size-6 text-primary">
+                    <svg class="w-full h-full" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-[#0d141b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Apex Developments</h2>
+            </div>
+            <div class="flex flex-1 justify-end items-center gap-8">
+                <div class="hidden md:flex items-center gap-9">
+                    <a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium text-primary" href="projects.html">Projects</a>
+                    <a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="about.html">About Us</a>
+                    <a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="opportunities.html">Investors</a>
+                    <a class="text-[#0d141b] dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+                </div>
+                <a href="opportunities.html" class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal hover:bg-blue-600 transition-colors">
+                    <span class="truncate">Request Prospectus</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="relative w-full">
+        <div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-8 relative" data-alt="Modern high-rise construction site at sunset with cranes" style='background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBiIZ7MARMPj2zKs5y6F0aZSvvd7UskWb6HicSFqWTz3XC5qG0OzAEKScVC0gwACOLP4kDDbgo-wSDt8_nLgmlOok8uGklSX86rBaH0AxUf5JPygYye1f0pf0fJSr5CFXLRfhp7iAwD8xJ2HMntxRbcEmfTUrsoT3oY-Pb_R0HQcn_66Pqn9bskQEhydzPB2d4yVXWeImTMJW3YW0Bf-HUktaLFVGRIeFWlMIvUZH_ITQFp5U2z3FKLIhVIPPaeJdV1Jq3ieUjIick");'>
+            <div class="flex flex-col gap-4 text-center max-w-3xl z-10">
+                <h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                    Building the Future of Urban Living
+                </h1>
+                <h2 class="text-slate-200 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
+                    Explore our portfolio of high-yield residential and commercial developments across the Pacific Northwest. We deliver value through precision and vision.
+                </h2>
+            </div>
+            <!-- Quick Stats Overlay -->
+            <div class="absolute -bottom-16 w-full px-4 lg:px-40 flex justify-center">
+                <div class="bg-white dark:bg-[#1a2632] shadow-xl rounded-xl p-6 flex flex-wrap gap-8 md:gap-16 border border-[#cfdbe7] dark:border-[#2a3845]">
+                    <div class="flex flex-col items-center">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Total Portfolio</p>
+                        <p class="text-[#0d141b] dark:text-white text-3xl font-bold">$2.4B</p>
+                    </div>
+                    <div class="w-px bg-gray-200 dark:bg-gray-700 h-16 hidden md:block"></div>
+                    <div class="flex flex-col items-center">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Sq Ft Constructed</p>
+                        <p class="text-[#0d141b] dark:text-white text-3xl font-bold">8.5M</p>
+                    </div>
+                    <div class="w-px bg-gray-200 dark:bg-gray-700 h-16 hidden md:block"></div>
+                    <div class="flex flex-col items-center">
+                        <p class="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider">Active Projects</p>
+                        <p class="text-[#0d141b] dark:text-white text-3xl font-bold">14</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="pt-24 pb-12 px-4 lg:px-40 flex-1 w-full max-w-[1440px] mx-auto">
+        <!-- Controls Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <!-- Filter Segmented Button -->
+            <div class="bg-[#e7edf3] dark:bg-[#1a2632] p-1 rounded-lg inline-flex">
+                <label class="cursor-pointer px-4 py-2 rounded-md has-[:checked]:bg-white dark:has-[:checked]:bg-[#2a3845] has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 font-medium transition-all">
+                    <span class="text-sm">All Projects</span>
+                    <input checked="" class="hidden" name="project-filter" type="radio"/>
+                </label>
+                <label class="cursor-pointer px-4 py-2 rounded-md has-[:checked]:bg-white dark:has-[:checked]:bg-[#2a3845] has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 font-medium transition-all">
+                    <span class="text-sm">Residential</span>
+                    <input class="hidden" name="project-filter" type="radio"/>
+                </label>
+                <label class="cursor-pointer px-4 py-2 rounded-md has-[:checked]:bg-white dark:has-[:checked]:bg-[#2a3845] has-[:checked]:shadow-sm has-[:checked]:text-primary text-gray-500 dark:text-gray-400 font-medium transition-all">
+                    <span class="text-sm">Commercial</span>
+                    <input class="hidden" name="project-filter" type="radio"/>
+                </label>
+            </div>
+            <!-- Sort Dropdown -->
+            <div class="relative group">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Sort by:</span>
+                    <select class="bg-transparent text-[#0d141b] dark:text-white font-bold text-sm focus:outline-none cursor-pointer pr-6">
+                        <option>Completion Date</option>
+                        <option>Project Value</option>
+                        <option>ROI</option>
+                    </select>
+                    <span class="material-symbols-outlined text-gray-400 absolute right-0 pointer-events-none" style="font-size: 18px;">expand_more</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <!-- Project Card 1 -->
+            <div class="group bg-white dark:bg-[#1a2632] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e7edf3] dark:border-[#2a3845] flex flex-col h-full">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">In Progress</span>
+                    </div>
+                    <img alt="Project Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern glass skyscraper render with blue sky reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy9tEcoNEGpKtytwbA-Tf6xq1AD09kruTnguPZcv_S1d0pa6NsEjEPemuTMmR9rX_ztRNIyyW7nrCpAQITsoVwzOR7S1sTLq2PlRvLdbd6Ba4Dql7osig9wZ6WPGDwEEqEFZnPwbFnlfhKLUxXYwM6ImdpdtQLCrq34nBDgeb-RZVlQ6J3V0grq3y2WrV5fNh7SILP_y3gDba2em7KhWUYtj9PQfpbZNA8Wq-zM5x_dDUOtzhzf1Kzg5kWFLM8XQUReWfOXZiDHQg"/>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="text-sm font-medium opacity-90">Downtown Seattle</p>
+                    </div>
+                    <!-- Hover Quick View Action -->
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-[#0d141b] px-4 py-2 rounded-lg font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">visibility</span> Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white group-hover:text-primary transition-colors">The Azure Heights</h3>
+                        <span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer">favorite</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 line-clamp-2">A luxury 45-story residential tower redefining the skyline with sustainable materials and smart-home integration.</p>
+                    <div class="grid grid-cols-3 gap-4 mb-6 border-t border-b border-gray-100 dark:border-gray-700 py-4">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Value</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">$120M</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Units</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">340</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">ROI</p>
+                            <p class="font-bold text-primary">14.5%</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-sm text-gray-500">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            <span>Q4 2024 Delivery</span>
+                        </div>
+                        <a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="group bg-white dark:bg-[#1a2632] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e7edf3] dark:border-[#2a3845] flex flex-col h-full">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pre-Sale</span>
+                    </div>
+                    <img alt="Project Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Interior render of modern commercial office space with large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk42l1tWn2vaRBtAKMg5UyjIVF5tjIAHqpPhTCD4KOuF1x6lt0XT4DMsxGT4rwrBNQIVciPjfuoJ1hLmuGpScQPavONgcJDYj_W9Vk4stfbPPDAr87weKOqIZOOv-bh-mC9VnzmPA_PeB72D3_ZQK_nMTU48cHg-sjIBLjm2r1A93gTZ6nETBmMNs6inmICkEoMEfuWfJ6L3C65RBgc1qSR-a3spgW5lVHyyEcxLoSyepR2xMSkTeKB-5s3HIMZBwLmXYlZD5HsV0"/>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="text-sm font-medium opacity-90">Bellevue, WA</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-[#0d141b] px-4 py-2 rounded-lg font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">visibility</span> Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white group-hover:text-primary transition-colors">TechNexus Hub</h3>
+                        <span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer">favorite</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 line-clamp-2">A state-of-the-art commercial complex designed for the next generation of tech startups and established firms.</p>
+                    <div class="grid grid-cols-3 gap-4 mb-6 border-t border-b border-gray-100 dark:border-gray-700 py-4">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Value</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">$85M</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Sq Ft</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">125k</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">ROI</p>
+                            <p class="font-bold text-primary">11.2%</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-sm text-gray-500">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            <span>Q2 2025 Delivery</span>
+                        </div>
+                        <a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="group bg-white dark:bg-[#1a2632] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e7edf3] dark:border-[#2a3845] flex flex-col h-full">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-slate-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Completed</span>
+                    </div>
+                    <img alt="Project Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Luxury white residential home exterior with modern architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOGzAmIEQ8ypImADdbpae3dYcMhEfrY9oYM3t-UtLl64FTN4D2kOQYQQYZneTyNnMLnr1h7vN7EgN4L8RoYHRh4U6Fe5YoNfcaPJsrPtkmRgAGvq4fqk2biXGRxuALrzwkS4AqDLgEm2HMGeGcn_oAMRYs0PPEOVtqJyd9dSA00JkZXDrt43VAviBTNhi3DyGhPjxtebwRP5rgTof1_7oCveYb9qVCInVxd3ANNdmj5IhiHn5ygMFp1QkTIOPHPIkCuI0aD_TdhOA"/>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="text-sm font-medium opacity-90">Portland, OR</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-[#0d141b] px-4 py-2 rounded-lg font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">visibility</span> Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white group-hover:text-primary transition-colors">The Riverfront Lofts</h3>
+                        <span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer">favorite</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 line-clamp-2">Historic renovation project converting industrial warehouse space into premium river-view loft apartments.</p>
+                    <div class="grid grid-cols-3 gap-4 mb-6 border-t border-b border-gray-100 dark:border-gray-700 py-4">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Value</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">$32M</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Units</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">85</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">ROI</p>
+                            <p class="font-bold text-primary">18.0%</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-sm text-gray-500">
+                            <span class="material-symbols-outlined text-sm">check_circle</span>
+                            <span>Sold Out</span>
+                        </div>
+                        <a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 4 -->
+            <div class="group bg-white dark:bg-[#1a2632] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e7edf3] dark:border-[#2a3845] flex flex-col h-full">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">In Progress</span>
+                    </div>
+                    <img alt="Project Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Low angle view of modern apartment building with balconies" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgBkqvtUPSaNrXCHznRAtTf4xzqsGBSVw83CAE22Lzr8vMe3AZDrHOAuf18t5O5w8UT950uEEFnrk5q1BSFfgJQWMdwzrLMzJyU1Aj4G7c1pKAaGnXhR7w87PuRUtT-kijB8tmL71ZlSuV1euW7dsBdF1hi17dUpO5HfLvvHCP6yosMTUtzUD-6A64RERZuX7KShEF5sRnQ-16UK3P496FdkafypdpUQz2iR2j70Sui1b1XV3lDFwjn0KGpahv588cJLfpECKYACE"/>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="text-sm font-medium opacity-90">Vancouver, BC</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-[#0d141b] px-4 py-2 rounded-lg font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">visibility</span> Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white group-hover:text-primary transition-colors">Harbor View Estates</h3>
+                        <span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer">favorite</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 line-clamp-2">Exclusive waterfront community featuring private docks and shared luxury amenities.</p>
+                    <div class="grid grid-cols-3 gap-4 mb-6 border-t border-b border-gray-100 dark:border-gray-700 py-4">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Value</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">$65M</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Units</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">42</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">ROI</p>
+                            <p class="font-bold text-primary">13.8%</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-sm text-gray-500">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            <span>Q3 2025 Delivery</span>
+                        </div>
+                        <a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 5 -->
+            <div class="group bg-white dark:bg-[#1a2632] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e7edf3] dark:border-[#2a3845] flex flex-col h-full">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Pre-Sale</span>
+                    </div>
+                    <img alt="Project Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Wide angle shot of modern architecture city block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxxFpDa1QEcsylt3V6ipF7bAT50vg8jfC5yTQLvO__T13ndKw0XiRJizCL7wwvQ2khzlVa0b7ghxZWIl5XSaws9A-5eHuy3haqpXAhWQsY3rnuZBmlI7dWGSONOD5rxwxOOwt69ycQgpU8dYBHqOQczP0ANvh6xTJKkP7qTmND575DXW23Sj1IOKqe9uVOyPV3-ABeEtA7H3q8HXGgIt4vQh-sVHwqj-yqeSjxBbtjg2ZubBE60KcUy5x2r0phKMDrvnASadzOH4A"/>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="text-sm font-medium opacity-90">Tacoma, WA</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-[#0d141b] px-4 py-2 rounded-lg font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">visibility</span> Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white group-hover:text-primary transition-colors">The Nexus Center</h3>
+                        <span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer">favorite</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 line-clamp-2">Mixed-use development combining retail, office space, and affordable housing units in a central hub.</p>
+                    <div class="grid grid-cols-3 gap-4 mb-6 border-t border-b border-gray-100 dark:border-gray-700 py-4">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Value</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">$55M</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Sq Ft</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">210k</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">ROI</p>
+                            <p class="font-bold text-primary">10.5%</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-sm text-gray-500">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            <span>Q1 2026 Delivery</span>
+                        </div>
+                        <a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 6 -->
+            <div class="group bg-white dark:bg-[#1a2632] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-[#e7edf3] dark:border-[#2a3845] flex flex-col h-full">
+                <div class="relative h-64 overflow-hidden">
+                    <div class="absolute top-4 left-4 z-10">
+                        <span class="bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">New Launch</span>
+                    </div>
+                    <img alt="Project Image" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist modern house in nature setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrbELs2qy82YhX_zbtPPmysYe0u-kKac2ZR5FPkq73h7R_FGUY0MMTBtQrvJF5ZTsZ_dTuyTb87GXcFbFUvUuyL-JwHpRRIhEQHsOEeXkYYCuFwnAWzSP2DVljDGnqwLyC14oCHa-2x7M9toGFLFNVdr3QgY9owFD3aZWCbnQlCyiliVEXMZCeOjwkBYYhfcIkoQ4cHSLnhnlAO9wYEZErw2P6Cwpx_znrlrjnE6CKeKLU_A_iJn6Q8UFHsqOwPIy91eJ5IUZYVbM"/>
+                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <p class="text-sm font-medium opacity-90">Bend, OR</p>
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-[#0d141b] px-4 py-2 rounded-lg font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">visibility</span> Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-[#0d141b] dark:text-white group-hover:text-primary transition-colors">Cascade Retreats</h3>
+                        <span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer">favorite</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mb-6 line-clamp-2">A boutique collection of eco-friendly vacation homes nestled in the Cascade foothills.</p>
+                    <div class="grid grid-cols-3 gap-4 mb-6 border-t border-b border-gray-100 dark:border-gray-700 py-4">
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Value</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">$28M</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">Units</p>
+                            <p class="font-bold text-[#0d141b] dark:text-slate-200">18</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase font-semibold">ROI</p>
+                            <p class="font-bold text-primary">16.2%</p>
+                        </div>
+                    </div>
+                    <div class="mt-auto flex items-center justify-between">
+                        <div class="flex items-center gap-1 text-sm text-gray-500">
+                            <span class="material-symbols-outlined text-sm">calendar_month</span>
+                            <span>Q2 2026 Delivery</span>
+                        </div>
+                        <a class="text-primary text-sm font-bold hover:underline flex items-center gap-1" href="#">
+                            Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More -->
+        <div class="flex justify-center mt-12">
+            <button class="flex items-center gap-2 px-6 py-3 border border-[#cfdbe7] dark:border-[#2a3845] rounded-lg text-sm font-bold text-[#0d141b] dark:text-slate-200 hover:bg-gray-100 dark:hover:bg-[#2a3845] transition-colors">
+                Load More Projects <span class="material-symbols-outlined text-sm">expand_more</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- CTA Footer Section -->
+    <div class="bg-[#1a2632] text-white py-16 px-4 lg:px-40 mt-12">
+        <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col gap-4 max-w-xl text-center md:text-left">
+                <h2 class="text-3xl font-bold">Ready to invest in the future?</h2>
+                <p class="text-gray-400 text-lg">Download our full investor prospectus to see detailed financial breakdowns, historical performance, and future projections.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-primary hover:bg-blue-600 transition-colors text-white font-bold py-3 px-8 rounded-lg flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined">download</span> Download Prospectus
+                </button>
+                <a href="contact.html" class="bg-transparent border border-gray-600 hover:bg-gray-700 transition-colors text-white font-bold py-3 px-8 rounded-lg text-center">
+                    Schedule a Meeting
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

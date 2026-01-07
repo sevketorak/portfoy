@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Hizmetlerimiz - Engineering Corp</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#197fe6",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111921",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2632",
+                        "border-light": "#dce0e5",
+                        "border-dark": "#2b3b4d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation -->
+        <div class="w-full border-b border-solid border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark">
+            <div class="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-7xl">
+                <div class="flex items-center gap-4">
+                    <div class="size-8 text-primary">
+                        <svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Engineering Corp</h2>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <nav class="flex items-center gap-6">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Ana Sayfa</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">Hakkımızda</a>
+                        <a class="text-sm font-medium text-primary" href="services.html">Hizmetler</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Projeler</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">İletişim</a>
+                    </nav>
+                    <button class="bg-primary hover:bg-blue-600 text-white text-sm font-bold rounded-lg h-10 px-5 transition-colors">
+                        Teklif Al
+                    </button>
+                </div>
+                <!-- Mobile Menu Icon -->
+                <button class="md:hidden text-[#111418] dark:text-white" id="mobile-menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="relative w-full h-[500px] flex items-center justify-center bg-cover bg-center" data-alt="Low angle view of modern steel skyscraper construction site against blue sky" style='background-image: linear-gradient(rgba(17, 25, 33, 0.7), rgba(17, 25, 33, 0.7)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmJqgLMto7SSv-7io7Om_Tkk1i-7DVfs7ZwFWqb6g80ceyesWbOxzpKMfYSAy-yqkEdPzKhVGJqMDqQOspDj7okLx-NMUkRunDF8prWc4wj_vCmpUpveWC9T5npVlFdyeOFymojsHNxcw7vKuNSSgZs3frbjBNFSN2ZoQAen6tV3hCzPfb2Yi75w-V-t9-QcIu97KIu1R-mGId3v0k36ghlPLtC30t8JYyI535H9yllv91k2_xXTR9IxjJprOVSE_peZdd8Hr1Ax8");'>
+            <div class="flex flex-col items-center text-center max-w-3xl px-4">
+                <span class="text-primary text-sm font-bold tracking-widest uppercase mb-4">Dünya Standartlarında Çözümler</span>
+                <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-6">
+                    Mühendislikte Mükemmellik
+                </h1>
+                <p class="text-gray-200 text-lg md:text-xl font-normal max-w-2xl mb-8">
+                    Endüstriyel, ticari ve altyapı projelerinde hassasiyet, dayanıklılık ve yenilik sunuyoruz.
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-primary hover:bg-blue-600 text-white text-base font-bold rounded-lg h-12 px-8 transition-all">
+                        Portföyü Görüntüle
+                    </button>
+                    <button class="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-base font-bold rounded-lg h-12 px-8 border border-white/30 transition-all">
+                        İletişime Geç
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="bg-surface-light dark:bg-surface-dark py-12 border-b border-border-light dark:border-border-dark">
+            <div class="max-w-7xl mx-auto px-4 md:px-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex flex-col gap-1">
+                        <p class="text-4xl font-bold text-primary">25+</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Yıllık Deneyim</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-4xl font-bold text-primary">150+</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Tamamlanan Proje</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-4xl font-bold text-primary">50+</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Uzman Mühendis</p>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-4xl font-bold text-primary">12</p>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Hizmet Verilen Ülke</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Services Grid -->
+        <div class="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-10 w-full">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-4">Temel Hizmetlerimiz</h2>
+                <p class="text-gray-500 dark:text-gray-400 max-w-2xl text-lg">
+                    Modern inşaatın benzersiz zorluklarına uygun kapsamlı mühendislik çözümleri sunuyoruz.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="group flex flex-col p-8 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary transition-colors duration-300">
+                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">foundation</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Yapısal Mühendislik</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        Gelişmiş deprem dirençli tasarımlar, beton çerçeveler ve çelik yapı analizleri ile güvenlik ve uzun ömür sağlıyoruz.
+                    </p>
+                    <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all" href="projects.html">
+                        Projeleri Görüntüle <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group flex flex-col p-8 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary transition-colors duration-300">
+                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">factory</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Endüstriyel İnşaat</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        Fabrikalar, depolar ve işleme tesisleri için operasyonel verimlilik için optimize edilmiş yerleşimlerle anahtar teslim çözümler.
+                    </p>
+                    <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all" href="projects.html">
+                        Projeleri Görüntüle <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group flex flex-col p-8 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary transition-colors duration-300">
+                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">add_road</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Altyapı</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        Sürdürülebilir kentsel büyüme için tasarlanmış yollar, köprüler ve kamu hizmetleri dahil büyük ölçekli inşaat mühendisliği.
+                    </p>
+                    <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all" href="projects.html">
+                        Projeleri Görüntüle <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group flex flex-col p-8 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary transition-colors duration-300">
+                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">assignment</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Proje Yönetimi</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        Projenizin zamanında ve bütçe dahilinde teslim edilmesini sağlamak için uçtan uca denetim, maliyet tahmini ve zaman çizelgesi yönetimi.
+                    </p>
+                    <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all" href="projects.html">
+                        Projeleri Görüntüle <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group flex flex-col p-8 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary transition-colors duration-300">
+                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">home_work</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Yenileme & Restorasyon</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        Mevcut yapıları modernize etme ve yapısal bütünlüğe dikkat ederek tarihi binaları restore etme.
+                    </p>
+                    <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all" href="projects.html">
+                        Projeleri Görüntüle <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group flex flex-col p-8 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark hover:border-primary transition-colors duration-300">
+                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-3xl">engineering</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mekanik & Elektrik</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        HVAC sistemlerinden yüksek voltajlı güç dağıtımına kadar sorunsuz bina işlevselliği için entegre MEP hizmetleri.
+                    </p>
+                    <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all" href="projects.html">
+                        Projeleri Görüntüle <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Expertise Sections -->
+        <div class="bg-surface-light dark:bg-surface-dark py-16 md:py-24 border-t border-border-light dark:border-border-dark">
+            <div class="max-w-7xl mx-auto px-4 md:px-10 flex flex-col gap-24">
+                <!-- Feature 1 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="flex-1 order-2 lg:order-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="h-px w-8 bg-primary"></span>
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">Özel Uzmanlık</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Yüksek Teknolojili Endüstriyel Tesisler</h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                            Hassas iklim kontrolü, temiz odalar ve ağır makine temelleri gerektiren karmaşık endüstriyel ortamların inşasında uzmanız. Ekibimiz endüstriyel iş akışlarının kritik doğasını anlıyor.
+                        </p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold text-lg">Otomatik Depolama</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Optimize edilmiş dikey depolama çözümleri ve robotik entegrasyon.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold text-lg">Enerji Verimli Tasarım</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Operasyonel maliyetleri düşüren LEED sertifikalı sürdürülebilir bina uygulamaları.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1 order-1 lg:order-2 w-full">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                            <img class="object-cover w-full h-full hover:scale-105 transition-transform duration-700" data-alt="Interior view of a modern high-tech factory floor with machinery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFFRfHW97u1NKxRumzscFMfM2Mq-1x5qEFdNBVCXKjn5v8ELCYxOpSLPFKsFyVIemiys_vXuehslXDucyBuQ1pUr9Da6RhNj0XZVFVfMI1h-Tubg_BHr3_AHecTwHEty_NhR-igpi10DspJPLjCAU_GkvdDrNiJNbG08vtOzEfdcykPINfmtjvBPaE27dFutF8QXzc73dHdb4XWvzQtLfryhX6zQwPvYc7wrUgCDPWRI1PoOCtJT5FuhlZ8J0YZ2iUMQbHAV3lAvw"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                                <p class="text-white font-bold text-lg">Proje Örneği: TechLine Manufacturing, İzmir</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="flex-1 w-full">
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                            <img class="object-cover w-full h-full hover:scale-105 transition-transform duration-700" data-alt="Modern high-rise glass building architecture detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaME2XZwffEerDxmBM_XFhTdLTelNyCAEwJ50l0rQAqn5K15AVUGy24G4LGr1WAIWDPM48WH5GaajeA1wElrW2ujpT5mbYPu2LpNn5s57E_Dm6WWpWquvfah5wqluzHlvs-FntzIcujiMGniSdC1LIN9VzQhH-FhakKC_y822nz5wYMcIZ_P6-O0wIJB6zkPI-2qhesdbkPLsiV5-yVIgGo2rVe6OsIcMfCsJ_TgGwsm-eQR3SbQUrD0Z1GDRKS4fCdQic0WTcZ9o"/>
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                                <p class="text-white font-bold text-lg">Proje Örneği: Sapphire Residences, İstanbul</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="h-px w-8 bg-primary"></span>
+                            <span class="text-primary font-bold uppercase tracking-wider text-sm">Kentsel Gelişim</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Konut & Ticari Kuleler</h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                            İkonik yapılarla silüeti şekillendiriyoruz. Konut projelerimiz güvenlik, estetik ve topluluk yaşamına odaklanırken, ticari kulelerimiz maksimum kiracı esnekliği için tasarlanmıştır.
+                        </p>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold text-lg">Karma Kullanımlı Kompleksler</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Perakende, ofis ve yaşam alanlarını sorunsuz bir şekilde entegre etme.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+                                <div>
+                                    <h4 class="font-bold text-lg">Akıllı Bina Sistemleri</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Güvenlik, aydınlatma ve erişim kontrolü için IoT entegrasyonu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="relative w-full py-20 px-4 flex items-center justify-center bg-primary overflow-hidden">
+            <!-- Decorative background pattern -->
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+            <div class="relative z-10 max-w-4xl text-center flex flex-col items-center gap-6">
+                <h2 class="text-white text-3xl md:text-5xl font-black leading-tight">Vizyonunuzu inşa etmeye hazır mısınız?</h2>
+                <p class="text-white/90 text-lg md:text-xl max-w-2xl">
+                    Yeni bir endüstriyel tesis veya ticari kompleks olsun, ekibimiz mühendislik mükemmelliğini projenize getirmeye hazır.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                    <button class="bg-white text-primary hover:bg-gray-100 text-base font-bold rounded-lg h-14 px-8 shadow-lg transition-colors">
+                        Ücretsiz Teklif Alın
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 text-base font-bold rounded-lg h-14 px-8 transition-colors">
+                        Kurumsal Kataloğu İndir
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-4 md:px-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary">
+                            <div class="size-6">
+                                <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+                                </svg>
+                            </div>
+                            <span class="text-[#111418] dark:text-white text-lg font-bold">Engineering Corp</span>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">
+                            Maslak Mah. Büyükdere Cad.<br/>
+                            No: 123, İstanbul, Türkiye
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-[#111418] dark:text-white font-bold">Şirket</h4>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm" href="about.html">Hakkımızda</a>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm" href="#">Kariyer</a>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm" href="#">Haberler & Medya</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-[#111418] dark:text-white font-bold">Hizmetler</h4>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm" href="services.html">Yapısal</a>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm" href="services.html">Endüstriyel</a>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary text-sm" href="services.html">Altyapı</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-[#111418] dark:text-white font-bold">İletişim</h4>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">info@engineeringcorp.com</p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">+90 (212) 555 0123</p>
+                        <div class="flex gap-4 mt-2">
+                            <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+                            <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-border-light dark:border-border-dark pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">© 2024 Engineering Corp. Tüm hakları saklıdır.</p>
+                    <div class="flex gap-6">
+                        <a class="text-gray-400 hover:text-primary text-sm" href="#">Gizlilik Politikası</a>
+                        <a class="text-gray-400 hover:text-primary text-sm" href="#">Hizmet Şartları</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn')?.addEventListener('click', function() {
+            // Mobile menu functionality can be added here
+            alert('Mobil menü yakında eklenecek');
+        });
+    </script>
+</body>
+</html>
+

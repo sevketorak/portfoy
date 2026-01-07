@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="ConstructCorp - Building the Future. International infrastructure and high-rise development. Engineering the impossible for a better world."/>
+    <title>ConstructCorp - Building the Future</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2b90d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221e10",
+                        "surface-dark": "#2d2818",
+                        "border-gold": "#544e3b",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'hero-gradient': 'linear-gradient(rgba(34, 30, 16, 0.4) 0%, rgba(34, 30, 16, 0.8) 100%)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #221e10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #544e3b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f2b90d;
+        }
+        
+        /* Loading animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Mobile menu toggle */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        /* Smooth transitions */
+        * {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display overflow-x-hidden antialiased selection:bg-primary selection:text-background-dark">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+        
+        <!-- Navigation -->
+        <header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 bg-background-dark/80 backdrop-blur-md px-6 py-4 lg:px-20">
+            <div class="flex items-center gap-3 text-white">
+                <div class="flex items-center justify-center size-10 rounded bg-primary text-background-dark">
+                    <span class="material-symbols-outlined !text-[28px]">domain</span>
+                </div>
+                <h2 class="text-white text-xl font-bold leading-tight tracking-tight">ConstructCorp</h2>
+            </div>
+            
+            <nav class="hidden lg:flex flex-1 justify-center gap-10">
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#projects">Projects</a>
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#about">About</a>
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#services">Services</a>
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal" href="#news">News</a>
+            </nav>
+            
+            <div class="flex items-center gap-4">
+                <button id="mobile-menu-btn" class="sm:block lg:hidden text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-6 bg-primary hover:bg-[#d9a60b] transition-colors text-background-dark text-sm font-bold leading-normal tracking-wide">
+                    <span class="truncate">Request Consultation</span>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-[73px] left-0 right-0 bg-background-dark/95 backdrop-blur-md border-b border-white/10 z-40 lg:hidden">
+            <nav class="flex flex-col px-6 py-6 gap-4">
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal py-2" href="#projects">Projects</a>
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal py-2" href="#about">About</a>
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal py-2" href="#services">Services</a>
+                <a class="text-white/80 hover:text-primary transition-colors text-sm font-medium leading-normal py-2" href="#news">News</a>
+            </nav>
+        </div>
+        
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[600px] w-full flex items-end pb-20 lg:pb-32 px-6 lg:px-20 bg-cover bg-center bg-no-repeat" data-alt="Aerial view of a massive modern city skyline at dusk with lights" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(34, 30, 16, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxZwrw9KdGHOtBnqPt90NHWl7LLiMZ7T-rngIdJ4f6ovfvog1bUtVbPzTbKnidT3SXIdix6fzzyTLt2iP8TVij_-VC5VFx9rSIYqpWitnt3msN-72WpmXuJ1EiOT01lnWaix9waexAMtHbPgPaDxLdKz2tm2HlAJi-hm7teUuzIO-nfXN-Seh8NJWQjTMhhmMEfviQxSU6iZ5FMs_N44GaJsBN7gpNRkcVGpSCqjACKVhvo7x51dQfN5qwoaGkxtOf0nHQaJM8f-s");'>
+            <div class="relative z-10 w-full max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 items-end">
+                <div class="flex flex-col gap-6 text-left animate-fade-in-up">
+                    <div class="flex items-center gap-2 text-primary font-bold tracking-widest uppercase text-xs">
+                        <span class="w-8 h-[2px] bg-primary"></span>
+                        Est. 1979
+                    </div>
+                    <h1 class="text-white text-5xl md:text-7xl font-black leading-[0.95] tracking-tight">
+                        Building the<br/>Skyline of<br/><span class="text-white/50">Tomorrow.</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg font-light leading-relaxed max-w-md border-l-2 border-primary/50 pl-6">
+                        International infrastructure and high-rise development. Engineering the impossible for a better world.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-4">
+                        <button class="flex cursor-pointer items-center justify-center rounded h-12 px-8 bg-primary hover:bg-[#d9a60b] transition-all text-background-dark text-base font-bold tracking-wide">
+                            View Portfolio
+                        </button>
+                        <button class="flex cursor-pointer items-center justify-center rounded h-12 px-8 border border-white/20 hover:bg-white/10 transition-all text-white text-base font-medium tracking-wide backdrop-blur-sm">
+                            Our Story
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Hero Quick Stats (Hidden on small screens) -->
+                <div class="hidden lg:flex justify-end items-end gap-2">
+                    <div class="bg-black/40 backdrop-blur-md p-6 rounded border border-white/10 w-64">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="material-symbols-outlined text-primary">engineering</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-400">Current Focus</span>
+                        </div>
+                        <p class="text-white font-bold">Mega-Bridge Project</p>
+                        <p class="text-sm text-gray-400">San Francisco Bay Area</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="bg-background-dark border-b border-white/5 py-12 px-6 lg:px-20">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                    <div class="flex flex-col gap-2 p-6 border-l border-primary/20 hover:border-primary transition-colors duration-300">
+                        <p class="text-primary text-4xl lg:text-5xl font-bold leading-tight">50+</p>
+                        <p class="text-gray-400 text-sm lg:text-base font-medium uppercase tracking-wide">Skyscrapers Built</p>
+                    </div>
+                    <div class="flex flex-col gap-2 p-6 border-l border-primary/20 hover:border-primary transition-colors duration-300">
+                        <p class="text-primary text-4xl lg:text-5xl font-bold leading-tight">$2B+</p>
+                        <p class="text-gray-400 text-sm lg:text-base font-medium uppercase tracking-wide">Total Project Value</p>
+                    </div>
+                    <div class="flex flex-col gap-2 p-6 border-l border-primary/20 hover:border-primary transition-colors duration-300">
+                        <p class="text-primary text-4xl lg:text-5xl font-bold leading-tight">45</p>
+                        <p class="text-gray-400 text-sm lg:text-base font-medium uppercase tracking-wide">Years of Excellence</p>
+                    </div>
+                    <div class="flex flex-col gap-2 p-6 border-l border-primary/20 hover:border-primary transition-colors duration-300">
+                        <p class="text-primary text-4xl lg:text-5xl font-bold leading-tight">12</p>
+                        <p class="text-gray-400 text-sm lg:text-base font-medium uppercase tracking-wide">Global Locations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About / Mission -->
+        <section id="about" class="py-24 px-6 lg:px-20 bg-background-dark">
+            <div class="max-w-[800px] mx-auto text-center flex flex-col gap-8">
+                <span class="material-symbols-outlined text-primary text-5xl">architecture</span>
+                <h2 class="text-white text-3xl md:text-5xl font-bold leading-tight">
+                    We are the company of <span class="text-primary">big projects</span>.
+                </h2>
+                <p class="text-gray-300 text-lg md:text-xl font-light leading-relaxed">
+                    From suspension bridges that span continents to corporate headquarters that touch the clouds, we engineer the impossible. Our legacy is built on trust, scale, and uncompromising quality.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Featured Projects Grid -->
+        <section id="projects" class="py-10 px-6 lg:px-20 bg-background-dark">
+            <div class="max-w-[1200px] mx-auto flex flex-col gap-12">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-6">
+                    <div>
+                        <h3 class="text-white text-3xl font-bold mb-2">Featured Developments</h3>
+                        <p class="text-gray-400">Curated selection of our recent engineering milestones.</p>
+                    </div>
+                    <a class="text-primary font-bold text-sm tracking-wide uppercase hover:text-white transition-colors flex items-center gap-1" href="#">
+                        All Projects <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group cursor-pointer flex flex-col gap-4">
+                        <div class="relative overflow-hidden rounded-lg aspect-[4/5] md:aspect-[3/4]">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" alt="Low angle shot of a futuristic glass skyscraper reflecting the sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDX1h7tr-eG-_EzQYMiHa61SKcHxOU8E3S9rXymJnjuDmIZpMz2PVDHh-A1lglRsqMwC054yB6P_-CKRT6zWVPG1N5ZN08UHs_skrAQyVHG5ptzwxszj1pNut9IxHwx2GsiiLHKVkHJs7uPjtck8DHAxtXBa3cI99j5EbJ9i-vHivoDdXPWibsxcyvPSUBl5AzWglJn2bNEFxRFNR2yLPKP_Q9FAhMrHUa5u6fCxNK3wZubJXFKNXBVyVoHTEzQdmORpaWOpFlY8M"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest mb-1 block">Commercial</span>
+                                <h4 class="text-white text-2xl font-bold">The Zenith Tower</h4>
+                                <p class="text-gray-300 text-sm mt-1 flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span> Dubai, UAE
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="group cursor-pointer flex flex-col gap-4 lg:mt-16">
+                        <div class="relative overflow-hidden rounded-lg aspect-[4/5] md:aspect-[3/4]">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" alt="Large suspension bridge spanning across a foggy bay at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZIUMJWBKdfwSpNt7IwIMtm1DeviIAkQMtQ5Xi1TQWxuSl03DUnQTaJDHInjgFDaHkaDEZLVyfG2N5C5I5Xt2hGaiJYCsV-9sAPqcT1Ru23KAHKNf9EXh3dTOfKeAzOPWZXUwXvZ9b6dOY8rrA-pOYmyic6kVQVL5cy0g6XpmUiua9RsTmNfHI9212PgpuUYjspUL5RxkzgCuKKUjkkZ7wuaxyZ6BQml7PyH39MjAoM3x95vBxREMbekNYzu1Gob4xJdcUJaDxKH0"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest mb-1 block">Infrastructure</span>
+                                <h4 class="text-white text-2xl font-bold">Harbor Bridge</h4>
+                                <p class="text-gray-300 text-sm mt-1 flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span> Sydney, Australia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="group cursor-pointer flex flex-col gap-4">
+                        <div class="relative overflow-hidden rounded-lg aspect-[4/5] md:aspect-[3/4]">
+                            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" alt="Modern geometric concrete architecture building structure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxKPQnj8jzWjSo_aspcJWFb5YsvJ2-XffrjnbbQmya4BGL3o5mkRWUyF6Wz8CqhCGNyucbe_2No5dxH1Q9r4OwrqgNBXA9HDBID_afz6foh_zni7C1JdXBQKODOFHnblz5ZQVpDKNzc6ejrw0kA-0cbQc7uiHdBpGUxEITsCaUM0_KycZZ8-7eBz7pJzBXWW_a14jY93zpiOlvuKZUm86Qenm84kN0uyfjay4hqEZAnLJgglZ8JX56g-IgOJhD5jxkrl2hVlYJVnw"/>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                            <div class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest mb-1 block">Industrial</span>
+                                <h4 class="text-white text-2xl font-bold">Vertex Logistics Hub</h4>
+                                <p class="text-gray-300 text-sm mt-1 flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span> Berlin, Germany
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services / Capabilities (Grid) -->
+        <section id="services" class="py-20 px-6 lg:px-20 bg-surface-dark/50">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
+                    <!-- Card 1 -->
+                    <div class="bg-background-dark p-10 flex flex-col gap-6 group hover:bg-surface-dark transition-colors">
+                        <div class="size-12 rounded bg-surface-dark group-hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+                            <span class="material-symbols-outlined">apartment</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xl font-bold mb-3">High-Rise Construction</h4>
+                            <p class="text-gray-400 leading-relaxed">Defining skylines with sustainable, state-of-the-art vertical structures.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="bg-background-dark p-10 flex flex-col gap-6 group hover:bg-surface-dark transition-colors">
+                        <div class="size-12 rounded bg-surface-dark group-hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xl font-bold mb-3">Civil Infrastructure</h4>
+                            <p class="text-gray-400 leading-relaxed">Connecting communities through massive bridges, tunnels, and roadways.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3 -->
+                    <div class="bg-background-dark p-10 flex flex-col gap-6 group hover:bg-surface-dark transition-colors">
+                        <div class="size-12 rounded bg-surface-dark group-hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+                            <span class="material-symbols-outlined">factory</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xl font-bold mb-3">Industrial Complexes</h4>
+                            <p class="text-gray-400 leading-relaxed">Turnkey solutions for manufacturing, logistics, and power plants.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-24 px-6 lg:px-20 bg-background-dark border-t border-white/5 relative overflow-hidden">
+            <!-- Abstract background element -->
+            <div class="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+                <div class="max-w-2xl">
+                    <h2 class="text-white text-3xl md:text-4xl font-bold mb-4">Ready to build the impossible?</h2>
+                    <p class="text-gray-400 text-lg">Partner with ConstructCorp for your next landmark project. Our team is ready to consult on global initiatives.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <button class="flex cursor-pointer items-center justify-center rounded h-14 px-10 bg-primary hover:bg-[#d9a60b] text-background-dark text-lg font-bold tracking-wide shadow-[0_0_20px_rgba(242,185,13,0.3)] transition-all transform hover:-translate-y-1">
+                        Start a Project
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="bg-[#1a170d] text-white pt-20 pb-10 px-6 lg:px-20 border-t border-white/10">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+                <!-- Brand Col -->
+                <div class="lg:col-span-4 flex flex-col gap-6">
+                    <div class="flex items-center gap-3 text-white">
+                        <div class="flex items-center justify-center size-8 rounded bg-primary text-background-dark">
+                            <span class="material-symbols-outlined !text-[20px]">domain</span>
+                        </div>
+                        <h2 class="text-white text-lg font-bold tracking-tight">ConstructCorp</h2>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        ConstructCorp is a global leader in construction and engineering, dedicated to shaping the built environment with integrity and innovation.
+                    </p>
+                    <div class="flex gap-4 mt-2">
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-background-dark transition-all" href="#" aria-label="Website">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-background-dark transition-all" href="#" aria-label="Email">
+                            <span class="material-symbols-outlined text-sm">mail</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links Col -->
+                <div class="lg:col-span-2">
+                    <h3 class="font-bold text-white mb-6 uppercase text-sm tracking-widest">Company</h3>
+                    <ul class="flex flex-col gap-4 text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="#about">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Leadership</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#news">News &amp; Media</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links Col -->
+                <div class="lg:col-span-2">
+                    <h3 class="font-bold text-white mb-6 uppercase text-sm tracking-widest">Projects</h3>
+                    <ul class="flex flex-col gap-4 text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="#projects">Commercial</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#projects">Infrastructure</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#projects">Residential</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#projects">Industrial</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Map / Contact Col -->
+                <div class="lg:col-span-4 flex flex-col gap-6">
+                    <h3 class="font-bold text-white mb-2 uppercase text-sm tracking-widest">Global HQ</h3>
+                    <div class="relative w-full h-40 bg-gray-800 rounded-lg overflow-hidden border border-white/10 group">
+                        <!-- Abstract Map Placeholder -->
+                        <img class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" alt="Dark map style image of a city grid layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_GHUdBWPLDgrBwe5zfDOhOTn3JT-lNsaVS6wZstivEPIlMjd222mOgFXDWMrE2cfSODTTUC_eW4fSbW8OBb0hN9YdrhjLI8bSwcXdqnMfFgmTkmhQk86F_iZpfD8npLu3IB_a_TviRSvAXghJwMxS7pn1aDVm3SAkqvbJBlt52wFfyzJ5ebNlXkb95jhTB37oGH4TpBlVKOHsRBCIXt1mQq43EX3BNax73sZ8spHbY9wEjxBk0U8hNfMmE3xSvtk6B6JvGRBjXgw"/>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-4xl drop-shadow-lg">location_on</span>
+                        </div>
+                    </div>
+                    <div class="text-gray-400 text-sm">
+                        <p>1200 Architecture Ave, Suite 500</p>
+                        <p>New York, NY 10001, USA</p>
+                        <p class="mt-2 text-white font-medium">+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-[1200px] mx-auto mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>© 2024 ConstructCorp. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- JavaScript for mobile menu -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+            
+            // Close menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.backgroundColor = 'rgba(34, 30, 16, 0.95)';
+            } else {
+                header.style.backgroundColor = 'rgba(34, 30, 16, 0.8)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe stats and cards
+        document.querySelectorAll('.flex.flex-col.gap-2.p-6').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
